@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <!-- bootstrap version 4.0 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- google font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+    />
+
+    <!-- bootstrap version 4.6 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap download file and css file link -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- mail -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- INternal css -->
+    <style>
+      /* Make the image fully responsive */
+      .carousel-inner img {
+        width: 400px;
+        height: 300px;
+      }
+
+      @media (max-width: 568px) {
+        .carousel-inner img {
+          width: 350px;
+          height: 250px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navigation Bar -->
+    <div id="nav_bar">
+      <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="color: white; font-size: 30px; font-weight: 900"
+          ><b>G-Mart</b></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="true"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Product</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id="but"
+              style="border-radius: 80px; border-style: none"
+            />
+            <br /><br />
+            <button
+              class="btn my-2 my-sm-0"
+              type="submit"
+              style="color: rgb(58, 103, 142); background-color: #302409"
+            >
+              <b>Search</b>
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          //if you hard code, then use console
+          //.log to determine when you want the
+          //nav bar to stick.
+          console.log($(window).scrollTop());
+          if ($(window).scrollTop() > 0) {
+            $("#nav_bar").addClass("navbar-fixed");
+          }
+          if ($(window).scrollTop() < 0) {
+            $("#nav_bar").removeClass("navbar-fixed");
+          }
+        });
+      });
+    </script>
+
+    <!-- home page  -->
+    <section id="home" class="section one">
+      <div class="container">
+        <div class="column-left">
+          <h1 class="text" style="color: #070dc6"><b>B-Bazzar </b></h1>
+          <p
+            class="text"
+            style="
+              font-size: 18px;
+              word-spacing: 0.3rem;
+              letter-spacing: 0.1rem;
+              color: #2d3583;
+              font-weight: 300;
+            "
+          >
+            The Best Grocery At Such Cheap Price
+          </p>
+          <button id="but1">
+            <a href="product2.html" style="color: rgba(94, 46, 46, 0.391)">Order Now</a>
+          </button>
+        </div>
+        <div class="column-right1">
+          <iframe
+            src="https://embed.lottiefiles.com/animation/81738"
+            style="border: none; width: 60%; height: 40%"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- About page  -->
+    <section id="About" class="section four">
+      <div class="container">
+        <div class="column-left" style="align-items: center">
+          <h1 class="text" style="font-family: Comfortaa; font-size: 2.5rem">
+            <br />About Us
+          </h1>
+          <p
+            class="text"
+            style="
+              text-align: center;
+              line-height: 25px;
+              font-family: Comfortaa;
+            "
+          >
+            B-Bazzar is A E-Grocery Store Where You Can Buy Grocery And Other
+            Commodites At Very Cheap price And With A great Discount And
+            Cashback. We Have A Large Variety Of Brands With Quality Products
+            And Services . We Provide The Fastest Delivery Of Grocery With Our
+            Fast And Efficient Delivery Team.
+          </p>
+        </div>
+        <div class="column-right2" style="margin-left: 10%">
+          <img
+            src="Images/logo12.png"
+            class="image1"
+            alt="Organic"
+            style="box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.784)"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands page  -->
+    <section id="Brands" class="section five">
+      <br /><br />
+      <div class="flex">
+        <!-- brands  -->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <!-- Indicators --><br /><br />
+          <h1 class="text" style="text-align: center">Brands</h1>
+
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="4"></li>
+            <li data-target="#demo" data-slide-to="5"></li>
+            <li data-target="#demo" data-slide-to="6"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="Images/brands/Amul.jpg"
+                alt="Los Angeles"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/brands/cad.jpeg"
+                alt="Chicago"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/brands/everest.jpg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/brands/fortune.jpg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/brands/hindu.jpg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/brands/itc.jpeg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/brands/lays.png"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+          </div>
+
+          <!-- Product  -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+        <br />
+
+        <div id="demo1" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <h1 class="text" style="text-align: center">Products</h1>
+
+          <ul class="carousel-indicators">
+            <li data-target="#demo1" data-slide-to="0" class="active"></li>
+            <li data-target="#demo1" data-slide-to="1"></li>
+            <li data-target="#demo1" data-slide-to="2"></li>
+            <li data-target="#demo1" data-slide-to="3"></li>
+            <li data-target="#demo1" data-slide-to="4"></li>
+            <li data-target="#demo1" data-slide-to="5"></li>
+            <li data-target="#demo1" data-slide-to="6"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="Images/products/d2.jpg"
+                alt="Los Angeles"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/co.jpg"
+                alt="Chicago"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/c11.jpg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/da21.webp"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/h20.jpg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/k11.jpg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/sa1.webp"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/sa9.webp"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/products/m1.jpg"
+                alt="New York"
+                width="1100"
+                height="500"
+              />
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo1" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contact_Us" class="section six">
+      <div
+        class="contact-form section-gap"
+        style="font-weight: 1000; background-color: rgba(186, 69, 69, 0)"
+      >
+        <div class="wrapper">
+          <br /><br />
+          <h1
+            class="text"
+            style="
+              text-align: center;
+              text-decoration: underline;
+              font-size: 50px;
+            "
+          >
+            <br />Contact Us
+          </h1>
+          <br />
+          <div
+            class="contact-form"
+            style="
+              max-width: 90%;
+              margin: 0 auto;
+              border: 5px solid rgba(214, 214, 214, 0.504);
+              border-radius: 40px;
+            "
+          >
+            <div class="form-mid" style="border-radius: 40px">
+              <form action="javascript:sendmail()" method="post">
+                <div
+                  class="field"
+                  style="display: flex; flex-flow: row; padding: 1px"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="Name"
+                    id="Name"
+                    placeholder="Name"
+                    required=""
+                  />
+                  &nbsp;&nbsp;
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="Lastname"
+                    id="Lastname"
+                    placeholder="Last Name"
+                    required=""
+                  />
+                </div>
+                <div class="field">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="Sender"
+                    id="Sender"
+                    placeholder="Email"
+                    required=""
+                  />
+                </div>
+                <div class="field">
+                  <input
+                    type="text"
+                    name="pno"
+                    class="form-control"
+                    id="pno"
+                    placeholder="Phone Number"
+                    required="required"
+                  />
+                </div>
+                <textarea
+                  name="Message"
+                  class="form-control"
+                  id="Message"
+                  placeholder="Message"
+                  required=""
+                ></textarea>
+                <button type="submit" class="btn btn-contact">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <br />&nbsp;<br />&nbsp;
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <section id="Footer" class="section seven">
+      <footer class="page-footer font-small blue pt-4">
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <!-- grids  -->
+        <div class="container-fluid text-center text-md-left">
+          <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+              <!-- Content -->
+              <h5
+                class="text-uppercase"
+                style="text-decoration: 5px underline rgb(72, 72, 158)"
+              >
+                Contact Info
+              </h5>
+              <p>
+                <br />
+                <b>Address : </b> <br />21, Dalal St, Opposite Bombay Stock
+                Exchange, East-Fort, Pune, Maharashtra 400005 <br /><br /><b
+                  >Email :
+                </b>
+                <br />contact@B-Bazzar.com <br />
+                <br /><b>Phone No: </b><br />+ 91 099896789
+              </p>
+            </div>
+
+            <hr class="clearfix w-100 d-md-none pb-3" />
+            <div class="col-md-3 mb-md-0 mb-3">
+              <!-- Links -->
+              <h5
+                class="text-uppercase"
+                style="text-decoration: 5px underline rgb(8, 8, 8)"
+              >
+                Links
+                <br />
+                <br />
+              </h5>
+
+              <ul class="list-unstyled">
+                <li class="my-2"><a href="#">Home</a></li>
+                <li class="my-2"><a href="register.html">Products</a></li>
+                <li class="my-2"><a href="#About">Brands  Sell</a></li>
+                <li class="my-2"><a href="#home">About us </a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+              <!-- Links -->
+              <h5
+                class="text-uppercase"
+                style="text-decoration: 5px underline rgb(9, 9, 78)"
+              >
+              B-Bazzar
+              </h5>
+
+              <ul class="list-unstyled">
+                <p>
+                  <br />
+                  <b>
+                    B-Bazzar is A E-Grocery Store Where You Can Buy Grocery
+                    And Other Commodites At Very Cheap price And With A great
+                    Discount And Cashback.
+                  </b>
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+          <br />
+          © 2023 Copyright:
+          <a href="#"> B-Bazzar</a>
+        </div>
+        <br /><br />
+      </footer>
+    </section>
+
+    <!-- bootstrap scripts to get started  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    
+  
+
+    <script src="main.js"></script>
+  </body>
+</html>
